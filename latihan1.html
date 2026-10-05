@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <script>
+        document.write("Saya belajar JavaScript");
+        nama = "Al fanisa basri";
+        umur = 21;
+        document.write("<br>Halooo " + nama + ", ");
+        document.write("<hr>");
+
+        // fungsi tambah 2 bilangan
+        function tambah(a, b) {
+            var jumlah = (a + b);
+            return jumlah;
+        }
+        var nilai_1 = 12;
+        var nilai_2 = 24;
+        var hasil = tambah(nilai_1, nilai_2)
+        document.write("Jumlah " + nilai_1 + " + " + nilai_2 + " adalah " + hasil);
+
+        document.write("<hr>");
+        function validasi() {
+            if (document.myForm.inputNama.value == "") {
+                alert("Nama harus diiisi");
+                document.myform.inpurNama.focus();
+            } else {
+                alert("Terima kasih sudah mengisi");
+            }
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <title>Form Data</title>
+
+        <script>
+            function validasi() {
+                var nama = document.forms["myForm"]["inputNama"].value;
+                var alamat = document.forms["myForm"]["inputAlamat"].value;
+
+                if (nama == "") {
+                    alert("Nama harus diisi!");
+                    return false;
+                }
+
+                if (alamat == "") {
+                    alert("Alamat harus diisi!");
+                    return false;
+                }
+
+                alert("Data berhasil disimpan!");
+                return true;
+            }
+        </script>
+    </head>
+
+    <body>
+
+        <form name="myForm" onsubmit="return validasi()">
+
+            Nama:
+            <input type="text" name="inputNama">
+            <br><br>
+
+            Alamat:
+            <textarea name="inputAlamat"></textarea>
+            <br><br>
+            
+            <input type="submit" value="Simpan">
+
+        </form>
+
+    </body>
+
+    </html>
+</body>
+
+</body>
+
+</html>
